@@ -31,3 +31,8 @@ source ~/.zshrc
 ```bash
 echo "Hello World!"
 ```
+### To access the value of a variable, we use the variable name prepended with a dollar sign ($)
+```bash
+greeting="Hello"
+echo $greeting
+```
