@@ -36,3 +36,43 @@ echo "Hello World!"
 greeting="Hello"
 echo $greeting
 ```
+### Conditionals
+```bash
+if [ $index -lt 5 ]
+then
+  echo $index
+else
+  echo 5
+fi
+```
+#### Equal: -eq
+#### Not equal: -ne
+#### Less than or equal: -le
+#### Less than: -lt
+#### Greater than or equal: -ge
+#### Greater than: -gt
+#### Is null: -z
+#### Equal: ==
+#### Not equal: !=
+
+### Loops
+```bash
+for word in $paragraph
+do
+  echo $word
+done
+```
+```bash
+while [ $index -lt 5 ]
+do
+  echo $index
+  index=$((index + 1))
+done
+```
+```bash
+until [ $index -eq 5 ]
+do
+  echo $index
+  index=$((index + 1))
+done
+```
