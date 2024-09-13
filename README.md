@@ -76,3 +76,13 @@ do
   index=$((index + 1))
 done
 ```
+### Inputs
+```bash
+read number
+echo "You guessed $number"
+```
+### Aliases
+```bash
+alias saycolors='./saycolors.sh'
+alias saycolors='./saycolors.sh "green"'
+```
