@@ -1,4 +1,5 @@
 # Bash-Scripting setting
+https://www.codecademy.com/learn/bash-scripting/modules/bash-scripting/cheatsheet
 ### To add this permission to a file with filename: script.sh
 ```bash
 chmod +x script.sh
