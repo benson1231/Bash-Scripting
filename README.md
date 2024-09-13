@@ -86,3 +86,47 @@ echo "You guessed $number"
 alias saycolors='./saycolors.sh'
 alias saycolors='./saycolors.sh "green"'
 ```
+### source 目錄下的所有文件。* 是一個通配符，表示匹配 source 目錄下的所有文件和子目錄。
+```bash
+for filename in source/*
+```
+### ex
+```bash
+#!/bin/bash
+echo "Welcome to our world"
+## 1.1.1
+firstline=$(head -n 1 source/changelog.md)
+read -a splitfirstline <<< $firstline
+version=${splitfirstline[1]}
+echo "You are building version" $version
+
+echo 'Do you want to continue? (enter "1" for yes, "0" for no)'
+read versioncontinue
+if [ $versioncontinue -eq 1 ]
+  then
+    echo "OK"
+  else
+    echo "Please come back when you are ready"
+fi
+
+for filename in source/*
+do
+  echo $filename
+done
+
+if [ "$filename" == "source/secretinfo.md" ]
+then
+  echo "Not copying" $filename
+else
+  echo "Copying" $filename
+  cp $filename build/.
+fi
+
+cd build/
+ls
+# We'll add more code here later
+cd ..
+echo "Build version $version contains:"
+ls
+
+```
